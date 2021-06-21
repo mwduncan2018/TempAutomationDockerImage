@@ -3,9 +3,10 @@
 version: "3"
 services:
   simple-java-selenium-automation:
-    image: mduncan9999/simple-java-selenium-automation:1.0
+    image: mduncan9999/simple-java-selenium-automation:2.4
     container_name: simple-java-selenium-automation
     command: mvn test
+    env_file: .env
     depends_on:
         - selenium-hub
   selenium-hub:
